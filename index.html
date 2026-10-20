@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministerio Lab | Plataforma Bíblico-Teológica</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#140032',
+                            indigo: '#230052',
+                            purple: '#4C0099',
+                            cyan: '#00A3FF',
+                            lightCyan: '#E0F2FE',
+                            slate: '#0F172A',
+                            gold: '#D97706'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Cinzel', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(0, 163, 255, 0.12) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Top Notice Bar -->
+    <div class="bg-brand-dark text-slate-300 text-xs py-2.5 px-4 border-b border-brand-purple/30 relative z-50">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+            <span class="flex items-center justify-center gap-2">
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-cyan animate-pulse"></span>
+                <span class="font-bold text-slate-100">Ministerio Lab</span> · Estructura de apoyo para líderes ministeriales y educadores teológicos
+            </span>
+            <div class="flex items-center gap-4 text-slate-400 text-[11px]">
+                <span><i class="fas fa-check-circle text-brand-cyan mr-1"></i> Rigor Bíblico</span>
+                <span><i class="fas fa-layer-group text-brand-cyan mr-1"></i> Innovación Pedagógica</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN DE LOGOTIPO GIGANTE -->
+    <div class="bg-white border-b border-slate-200 py-8 px-4 shadow-sm relative">
+        <div class="max-w-7xl mx-auto flex flex-col items-center justify-center text-center space-y-3">
+            <a href="#inicio" class="inline-block group py-2">
+                <img src="logo.png" alt="Ministerio Lab Logo" class="h-36 sm:h-48 md:h-60 w-auto object-contain transition-transform group-hover:scale-105 duration-300 drop-shadow-lg" onerror="this.onerror=null; this.src='https://via.placeholder.com/700x240/230052/FFFFFF?text=MINISTERIO+LAB';">
+            </a>
+            <p class="text-xs sm:text-sm text-slate-500 font-semibold tracking-wider uppercase">Plataforma de Apoyo Bíblico-Teológico & Capacitación Ministerial</p>
+        </div>
+    </div>
+
+    <!-- Navegación Principal -->
+    <header class="bg-brand-indigo text-white sticky top-0 z-40 shadow-md border-b border-brand-purple/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            
+            <nav class="hidden md:flex items-center space-x-8 text-xs sm:text-sm font-bold text-slate-200">
+                <a href="#inicio" class="hover:text-brand-cyan transition-colors py-2">Inicio</a>
+                <a href="#mision" class="hover:text-brand-cyan transition-colors py-2">Propósito</a>
+                <a href="#recursos" class="hover:text-brand-cyan transition-colors py-2">Biblioteca de Recursos</a>
+                <a href="#historia" class="hover:text-brand-cyan transition-colors py-2">Línea de Tiempo</a>
+                <a href="#talleres" class="hover:text-brand-cyan transition-colors py-2">Talleres Zoom</a>
+            </nav>
+
+            <div class="md:hidden font-bold text-xs text-brand-cyan uppercase tracking-wider">
+                Ministerio Lab
+            </div>
+
+            <div>
+                <button onclick="openModal()" class="bg-brand-cyan hover:bg-sky-400 text-slate-950 text-xs font-extrabold px-4 py-2.5 rounded-lg shadow transition-all flex items-center gap-2">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Publicar Recurso</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Misión -->
+    <section id="inicio" class="bg-brand-dark text-white py-20 px-4 relative overflow-hidden bg-grid-pattern">
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand-purple/40 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-brand-cyan/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10 space-y-6">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-brand-cyan text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+                <i class="fas fa-book-bible"></i>
+                <span>Puente Generacional & Teológico</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-sans leading-tight tracking-tight text-white">
+                Facilitando la Transmisión del Evangelio en la Era Digital
+            </h1>
+
+            <p class="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto font-normal leading-relaxed">
+                Ministerio Lab nace para respaldar a pastores, líderes y educadores teológicos frente a los cambios generacionales y tecnológicos, derribando las barreras sociales modernas mediante herramientas y recursos bíblicos rigurosos.
+            </p>
+
+            <div class="pt-6 flex flex-wrap justify-center gap-4">
+                <a href="#recursos" class="bg-brand-cyan hover:bg-sky-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-lg transition-all text-sm flex items-center gap-2 transform hover:-translate-y-0.5">
+                    <span>Explorar Recursos</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#mision" class="bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-xl border border-white/20 transition-all text-sm backdrop-blur-md">
+                    Ver Misión
+                </a>
+            </div>
+
+            <!-- Indicadores -->
+            <div class="pt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-white/10 text-left">
+                <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                    <div class="text-brand-cyan font-bold text-2xl">01</div>
+                    <div class="text-xs text-slate-300 font-semibold mt-1">Artículos Bíblicos</div>
+                </div>
+                <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                    <div class="text-brand-cyan font-bold text-2xl">02</div>
+                    <div class="text-xs text-slate-300 font-semibold mt-1">Herramientas Digitales</div>
+                </div>
+                <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                    <div class="text-brand-cyan font-bold text-2xl">03</div>
+                    <div class="text-xs text-slate-300 font-semibold mt-1">Ebooks para Maestros</div>
+                </div>
+                <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                    <div class="text-brand-cyan font-bold text-2xl">04</div>
+                    <div class="text-xs text-slate-300 font-semibold mt-1">Talleres Zoom</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Propósito -->
+    <section id="mision" class="py-20 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14 space-y-2">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-purple">Propósito Institucional</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">¿Cómo apoya Ministerio Lab a tu labor?</h2>
+                <p class="text-slate-600 text-sm">Estructuras y métodos diseñados para enriquecer la enseñanza teológica local.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-50 to-white border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-indigo text-brand-cyan flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-users-rays"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Conexión Generacional</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Estrategias metodológicas para comunicar las verdades eternas de la Escritura respondiendo a las preguntas de la cultura actual.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-50 to-white border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-indigo text-brand-cyan flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Recursos Prácticos</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Plantillas para bosquejos, guías para institutos bíblicos y recursos estructurados listos para ser utilizados en tus clases o predicaciones.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-50 to-white border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-indigo text-brand-cyan flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Formación Continua</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Artículos bíblico-teológicos de fondo, análisis historiográficos y capacitaciones interactivas vía Zoom.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Biblioteca de Recursos -->
+    <section id="recursos" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-slate-200 gap-4">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-purple">Repositorio Institucional</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Biblioteca de Recursos</h2>
+            </div>
+
+            <div class="relative w-full sm:w-72">
+                <i class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                <input id="search-input" onkeyup="searchResources()" type="text" placeholder="Buscar por tema o título..." class="w-full pl-10 pr-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-indigo bg-white shadow-sm">
+            </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2 mb-10">
+            <button onclick="filterCategory('all')" class="cat-btn bg-brand-indigo text-white px-5 py-2.5 rounded-xl text-xs font-bold shadow-sm transition-all">Todos los Recursos</button>
+            <button onclick="filterCategory('articulos')" class="cat-btn bg-white text-slate-700 border border-slate-300 hover:bg-slate-100 px-5 py-2.5 rounded-xl text-xs font-bold transition-all">Artículos Bíblicos</button>
+            <button onclick="filterCategory('herramientas')" class="cat-btn bg-white text-slate-700 border border-slate-300 hover:bg-slate-100 px-5 py-2.5 rounded-xl text-xs font-bold transition-all">Herramientas Digitales</button>
+            <button onclick="filterCategory('ebooks')" class="cat-btn bg-white text-slate-700 border border-slate-300 hover:bg-slate-100 px-5 py-2.5 rounded-xl text-xs font-bold transition-all">Ebooks & Guías</button>
+            <button onclick="filterCategory('libros')" class="cat-btn bg-white text-slate-700 border border-slate-300 hover:bg-slate-100 px-5 py-2.5 rounded-xl text-xs font-bold transition-all">Descubrimientos Literarios</button>
+        </div>
+
+        <div id="resources-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="res-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group" data-category="articulos">
+                <div>
+                    <div class="h-32 bg-gradient-to-r from-brand-indigo to-brand-purple p-5 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute -right-4 -bottom-4 text-white/10 text-7xl"><i class="fas fa-scroll"></i></div>
+                        <span class="self-start text-[10px] font-extrabold uppercase tracking-wider text-brand-cyan bg-slate-950/50 backdrop-blur-md px-3 py-1 rounded-full border border-brand-cyan/30">Artículo Exegético</span>
+                        <div class="text-white text-xs font-medium"><i class="far fa-clock mr-1"></i> Lectura estimada: 8 min</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-indigo transition-colors">Comunicación Efectiva del Evangelio en la Era Digital</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">Principios exegéticos y metodológicos para transmitir verdades profundas de la fe a mentes hiperconectadas.</p>
+                    </div>
+                </div>
+                <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <span class="text-slate-500 font-semibold"><i class="fas fa-book-open text-brand-indigo mr-1"></i> Formato Digital</span>
+                    <a href="#" onclick="alert('Abriendo artículo...'); return false;" class="text-brand-indigo font-extrabold hover:underline">Leer Artículo →</a>
+                </div>
+            </div>
+
+            <div class="res-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group" data-category="herramientas">
+                <div>
+                    <div class="h-32 bg-gradient-to-r from-slate-900 to-brand-indigo p-5 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute -right-4 -bottom-4 text-white/10 text-7xl"><i class="fas fa-table"></i></div>
+                        <span class="self-start text-[10px] font-extrabold uppercase tracking-wider text-sky-300 bg-slate-950/50 backdrop-blur-md px-3 py-1 rounded-full border border-sky-400/30">Herramienta Digital</span>
+                        <div class="text-white text-xs font-medium"><i class="fas fa-file-excel mr-1"></i> Plantilla Editable</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-indigo transition-colors">Planificador de Sermones y Currículo Anual</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">Estructura organizada para diseñar series expositivas, coordinar maestros y llevar el control de temas estudiados.</p>
+                    </div>
+                </div>
+                <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <span class="text-slate-500 font-semibold"><i class="fas fa-download text-brand-indigo mr-1"></i> Descarga Directa</span>
+                    <a href="#" onclick="alert('Descargando herramienta...'); return false;" class="text-brand-indigo font-extrabold hover:underline">Descargar →</a>
+                </div>
+            </div>
+
+            <div class="res-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group" data-category="ebooks">
+                <div>
+                    <div class="h-32 bg-gradient-to-r from-emerald-800 to-teal-900 p-5 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute -right-4 -bottom-4 text-white/10 text-7xl"><i class="fas fa-graduation-cap"></i></div>
+                        <span class="self-start text-[10px] font-extrabold uppercase tracking-wider text-emerald-300 bg-slate-950/50 backdrop-blur-md px-3 py-1 rounded-full border border-emerald-400/30">Manual Docente</span>
+                        <div class="text-white text-xs font-medium"><i class="fas fa-file-pdf mr-1"></i> Documento PDF</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-indigo transition-colors">Guía Metodológica para la Escuela Dominical</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">Manual práctico para maestros de institutos bíblicos enfocado en dinámicas participativas y pedagogía moderna.</p>
+                    </div>
+                </div>
+                <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <span class="text-slate-500 font-semibold"><i class="fas fa-file-pdf text-brand-indigo mr-1"></i> Ebook Completo</span>
+                    <a href="#" onclick="alert('Descargando PDF...'); return false;" class="text-brand-indigo font-extrabold hover:underline">Obtener PDF →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Historia del Cristianismo -->
+    <section id="historia" class="bg-brand-dark text-white py-20 relative overflow-hidden bg-grid-pattern border-t border-b border-brand-purple/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-2">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-brand-cyan">Continuidad Doctrinal</span>
+                <h2 class="text-3xl font-extrabold text-white">Historia del Cristianismo & Contexto</h2>
+                <p class="text-slate-300 text-sm">Entender las transiciones del pasado nos capacita para responder con firmeza a los retos del presente.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md relative space-y-4">
+                    <div class="w-10 h-10 rounded-full bg-brand-cyan text-slate-950 font-extrabold flex items-center justify-center text-lg">01</div>
+                    <h3 class="text-xl font-bold text-white">Era Apostólica & Patrística</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed">La transmisión oral y escrita de la doctrina en medio del contexto greco-romano, preservando el Evangelio en un entorno adverso.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md relative space-y-4">
+                    <div class="w-10 h-10 rounded-full bg-brand-cyan text-slate-950 font-extrabold flex items-center justify-center text-lg">02</div>
+                    <h3 class="text-xl font-bold text-white">La Reforma & La Imprenta</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed">La imprenta como catalizador tecnológico para masificar la lectura bíblica y democratizar la formación teológica.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md relative space-y-4">
+                    <div class="w-10 h-10 rounded-full bg-brand-cyan text-slate-950 font-extrabold flex items-center justify-center text-lg">03</div>
+                    <h3 class="text-xl font-bold text-white">Era Digital Contemporánea</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed">El reto actual de Ministerio Lab: equipar a los ministerios locales con herramientas modernas para acortar la brecha tecnológica y social.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Talleres Zoom -->
+    <section id="talleres" class="py-20 max-w-5xl mx-auto px-4">
+        <div class="bg-gradient-to-r from-brand-indigo via-brand-purple to-slate-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden border border-brand-purple/40">
+            <div class="max-w-2xl relative z-10 space-y-4">
+                <span class="inline-block px-4 py-1.5 bg-brand-cyan/20 text-brand-cyan text-xs font-extrabold rounded-full uppercase tracking-wider border border-brand-cyan/30">Próximamente</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold">Talleres y Capacitaciones vía Zoom</h2>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                    Pronto iniciaremos módulos interactivos para equipar a pastores, docentes y líderes en pedagogía bíblica y herramientas digitales. ¡Inscríbete a la lista de espera!
+                </p>
+
+                <form onsubmit="event.preventDefault(); alert('¡Gracias por inscribirte a la lista de espera de Ministerio Lab!');" class="pt-4 flex flex-col sm:flex-row gap-3">
+                    <input type="email" placeholder="Ingresa tu correo electrónico" required class="px-5 py-3.5 rounded-xl text-slate-900 text-xs focus:outline-none flex-grow bg-white font-medium">
+                    <button type="submit" class="bg-brand-cyan hover:bg-sky-400 text-slate-950 font-extrabold px-8 py-3.5 rounded-xl text-xs transition-all shadow-md">
+                        Anotarme en la Lista
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center space-y-4 text-center">
+            <img src="logo.png" alt="Ministerio Lab" class="h-16 w-auto opacity-90" onerror="this.onerror=null; this.style.display='none';">
+            <p>© 2026 Ministerio Lab. Plataforma de Apoyo Bíblico-Teológico.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Publicador -->
+    <div id="publish-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4 border border-slate-200">
+            <div class="flex justify-between items-center border-b border-slate-100 pb-3">
+                <h3 class="font-bold text-slate-900">Publicar Recurso Teológico</h3>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 font-bold">✕</button>
+            </div>
+
+            <form onsubmit="saveResource(event)" class="space-y-3 text-xs">
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Título del Material</label>
+                    <input id="res-title" type="text" required class="w-full border border-slate-300 rounded-xl p-3 focus:ring-2 focus:ring-brand-indigo outline-none">
+                </div>
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Categoría</label>
+                    <select id="res-category" class="w-full border border-slate-300 rounded-xl p-3 focus:ring-2 focus:ring-brand-indigo outline-none">
+                        <option value="articulos">Artículo Bíblico</option>
+                        <option value="herramientas">Herramienta Digital</option>
+                        <option value="ebooks">Ebook / Guía</option>
+                        <option value="libros">Descubrimiento Literario</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Descripción Breve</label>
+                    <textarea id="res-desc" required rows="3" class="w-full border border-slate-300 rounded-xl p-3 focus:ring-2 focus:ring-brand-indigo outline-none"></textarea>
+                </div>
+                <div class="pt-2 flex justify-end gap-2">
+                    <button type="button" onclick="closeModal()" class="px-4 py-2 font-semibold text-slate-600 hover:bg-slate-100 rounded-xl">Cancelar</button>
+                    <button type="submit" class="px-5 py-2.5 font-extrabold bg-brand-indigo text-white rounded-xl hover:bg-brand-purple">Publicar Recurso</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        function filterCategory(cat) {
+            const cards = document.querySelectorAll('.res-card');
+            const btns = document.querySelectorAll('.cat-btn');
+
+            btns.forEach(b => {
+                b.classList.remove('bg-brand-indigo', 'text-white');
+                b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-300');
+            });
+
+            event.target.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-300');
+            event.target.classList.add('bg-brand-indigo', 'text-white');
+
+            cards.forEach(card => {
+                if (cat === 'all' || card.getAttribute('data-category') === cat) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function searchResources() {
+            const q = document.getElementById('search-input').value.toLowerCase();
+            const cards = document.querySelectorAll('.res-card');
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                card.style.display = text.includes(q) ? 'flex' : 'none';
+            });
+        }
+
+        function openModal() {
+            document.getElementById('publish-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('publish-modal').classList.add('hidden');
+        }
+
+        function saveResource(e) {
+            e.preventDefault();
+            const title = document.getElementById('res-title').value;
+            const category = document.getElementById('res-category').value;
+            const desc = document.getElementById('res-desc').value;
+
+            const grid = document.getElementById('resources-grid');
+            const newCard = document.createElement('div');
+            newCard.className = 'res-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group';
+            newCard.setAttribute('data-category', category);
+
+            newCard.innerHTML = `
+                <div>
+                    <div class="h-32 bg-gradient-to-r from-brand-indigo to-brand-purple p-5 flex flex-col justify-between relative overflow-hidden">
+                        <span class="self-start text-[10px] font-extrabold uppercase tracking-wider text-brand-cyan bg-slate-950/50 backdrop-blur-md px-3 py-1 rounded-full border border-brand-cyan/30">${category}</span>
+                        <div class="text-white text-xs font-medium">Reciente</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-indigo transition-colors">${title}</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">${desc}</p>
+                    </div>
+                </div>
+                <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <span class="text-slate-500 font-semibold"><i class="fas fa-file-alt text-brand-indigo mr-1"></i> Contenido Nuevo</span>
+                    <a href="#" onclick="alert('Abriendo recurso...'); return false;" class="text-brand-indigo font-extrabold hover:underline">Acceder →</a>
+                </div>
+            `;
+
+            grid.prepend(newCard);
+            closeModal();
+            alert('Recurso publicado con éxito en Ministerio Lab.');
+        }
+    </script>
+</body>
+</html>
